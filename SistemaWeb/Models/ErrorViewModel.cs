@@ -1,5 +1,3 @@
-using System;
-
 namespace SistemaWeb.Models
 {
     public class ErrorViewModel
