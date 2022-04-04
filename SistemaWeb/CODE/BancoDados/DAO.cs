@@ -1,9 +1,11 @@
 ﻿using SistemaWeb.CODE;
-using MySql.Data.MySqlClient;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using Microsoft.Data.SqlClient;
+using MySqlConnector;
 
 namespace SistemaWeb.CODE
 {
@@ -11,7 +13,7 @@ namespace SistemaWeb.CODE
     {
         public DbConnection getConnection(ConnectionString connString)
         {
-            DbProviderFactory dbFactory = MySqlClientFactory.Instance;
+            DbProviderFactory dbFactory = SqlClientFactory.Instance;
             DbConnection dbConn = dbFactory.CreateConnection();
             dbConn.ConnectionString = connString.ConnString;
             dbConn.Open();
@@ -19,7 +21,7 @@ namespace SistemaWeb.CODE
         }
         public DbCommand getCommand(ConnectionString connString)
         {
-            DbProviderFactory dbFactory = MySqlClientFactory.Instance;
+            DbProviderFactory dbFactory = SqlClientFactory.Instance;
             DbCommand dbCmd = dbFactory.CreateCommand();
             dbCmd.Connection = getConnection(connString);
             dbCmd.CommandType = CommandType.Text;
