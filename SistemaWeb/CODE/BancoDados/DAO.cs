@@ -1,11 +1,7 @@
-﻿using SistemaWeb.CODE;
-using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.Data.SqlClient;
+using MySqlConnector;
 using System.Data;
 using System.Data.Common;
-using Microsoft.Data.SqlClient;
-using MySqlConnector;
 
 namespace SistemaWeb.CODE
 {
