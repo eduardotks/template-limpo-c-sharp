@@ -1,5 +1,5 @@
 # zero-system-CSharp
-Template web inicial.
+Template web inicial, com possibilidade de uso de query strings.
 
 
 Arquivos úteis:
